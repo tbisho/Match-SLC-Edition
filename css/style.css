@@ -1,0 +1,16 @@
+.cards{
+    display: flex;
+    align-content: space-between;
+}
+
+.card{
+    background-color: green;
+    height: 260px;
+    width: 200px;
+    margin: 10px;
+}
+
+
+
+
+
