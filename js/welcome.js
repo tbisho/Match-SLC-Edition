@@ -1,19 +1,29 @@
-console.log("this your be welcome HTML")
+console.log("insanity check")
 
-// Go back and return input name to upperCase 
-// let userInput = prompt('what name do you go by?')
-const welcome = (name) =>{
-    document.querySelector(".playerName").innerHTML= `,  ${userInput}! `;
-}
-// welcome()
+// What happens when the page loads?
+// How is it event driven?
+    // -what happens when the page loads?
+// DOM events for user interaction 
+    // after the user has clicked a card we want to see an image
+// Is there a reason to remove an event listener? 
 
-// Add event listener to start game button
-// to start game I want to clear existing elements and display the game board
-const createCards = (numberOfCards) =>{
-    for(let i=0; i<numberOfCards; i++){
-        const card = document.createElement('div')
-        console.log(card)
-        document.querySelector('.cards').append(card)
+// Wait for user to click start game
+// MDN for event listeners 
+
+// after the user clicks start game fire createBoard function 
+
+// start game button
+const button = document.querySelector('button').addEventListener('click',createBoard)
+const container = document.querySelector('.container')
+function createBoard(eventObject) {
+    for (let i = 0; i<20; i++) {
+    let image = document.querySelector('img')
+    image.setAttribute('src','images/front1.jpeg')
+    container.appendChild(image)
     }
 }
-createCards(12)
+
+
+
+
+
