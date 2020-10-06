@@ -12,16 +12,36 @@ console.log("insanity check")
 
 // after the user clicks start game fire createBoard function 
 
-// start game button
-const button = document.querySelector('button').addEventListener('click',createBoard)
+// start game button & DOM elements for event listeners
+
 const container = document.querySelector('.container')
-function createBoard(eventObject) {
-    for (let i = 0; i<20; i++) {
-    let image = document.querySelector('img')
-    image.setAttribute('src','images/front1.jpeg')
-    container.appendChild(image)
-    }
+
+let strtBtn = document.querySelector('.strtBtn')
+console.log(strtBtn)
+strtBtn.addEventListener('click',createBoard)
+
+function createBoard(eventObject){
+    console.log(eventObject)
+    for (let i = 0; i<4; i++) {
+        const imageBoard = document.createElement('img')
+        imageBoard.setAttribute('src','images/front1.jpeg')
+        imageBoard.setAttribute('value', i)
+        container.appendChild(imageBoard)
+        }
+        strtBtn.removeEventListener('click',createBoard)
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
