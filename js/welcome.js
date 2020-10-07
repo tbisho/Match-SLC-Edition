@@ -2,10 +2,12 @@ cardArray = ['match-1.jpeg','match-2.jpeg', 'match-3.jpeg', 'match-4.jpeg','matc
 
 // grid container
 const container = document.querySelector('.container')
-// create game board
+// create game board with back of card image
 function getCards(){
     for (let i =0; i<cardArray.length; i++){
         var card = document.createElement('img')
+        card.setAttribute('src','display1.jpeg')
+        card.setAttribute('value', i)
     }
 }
 
