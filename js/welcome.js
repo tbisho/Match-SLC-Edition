@@ -1,88 +1,79 @@
-console.log("insanity check")
+cardArray = ['match-1.jpeg','match-2.jpeg', 'match-3.jpeg', 'match-4.jpeg','match-5.jpeg','match-6.jpeg']
 
-// What happens when the page loads?
-// How is it event driven?
-    // -what happens when the page loads?
-// DOM events for user interaction 
-    // after the user has clicked a card we want to see an image
-// Is there a reason to remove an event listener? 
-
-// Wait for user to click start game
-// MDN for event listeners 
-
-// after the user clicks start game fire createBoard function 
-
-// start game button & DOM elements for event listeners
-
+// grid container
 const container = document.querySelector('.container')
-let imageBoard = [];
-let images = document.querySelectorAll('.imageNotFlipped')
-console.log(images)
-let strtBtn = document.querySelector('.strtBtn')
-console.log(strtBtn)
-strtBtn.addEventListener('click',createBoard)
-let firstCard;
-let secondCard;
-
-// container.addEventListener
-
-function createBoard(){ 
-    
-    for (let i = 0; i<4; i++) {
-        images[i].setAttribute('src','images/front1.jpeg')
-        imageBoard.push(images)
-    }
-    // strtBtn.removeEventListener('click',createBoard)
-    return imageBoard
-}
-console.log(imageBoard)
-
-// display image when cards are clicked
-container.addEventListener('click', displayImage)
-function displayImage(eventObject){
-    // the image that I click
-    console.log(eventObject.target)
-    // change the image 
-    eventObject.target.setAttribute('src','images/display1.jpeg')
-    console.log(eventObject.target.getAttribute('value'))
-    if (firstCard === undefined){
-        firstCard = eventObject.target.getAttribute('value')
-    } else if (secondCard === undefined){
-        secondCard = eventObject.target.getAttribute('value')
-    }
-    console.log('first card value' + firstCard)
-    console.log('second card value' + secondCard)
-    
-    if (firstCard === secondCard){
-        console.log("it's a match!")
-    } else {
-        console.log("these cards do not match")
+// create game board
+function getCards(){
+    for (let i =0; i<cardArray.length; i++){
+        var card = document.createElement('img')
     }
 }
 
 
+// // start game button & DOM elements for event listeners
 
+// const container = document.querySelector('.container')
+// container.addEventListener('click', displayImage)
+// let imageBoard = [];
+// let images = document.querySelectorAll('.imageNotFlipped')
+// let strtBtn = document.querySelector('.strtBtn')
+// strtBtn.addEventListener('click',createBoard)
+// let firstCard;
+// let secondCard;
+// let arrayofFlipped = [];
+// let flippedImages = document.querySelectorAll('.flipped')
+// let shuffledCards;
 
+// // container.addEventListener
 
-// // check if the id of clicked cards are a match
-// function checkMatch(eventObject){
-//     console.log(eventObject)
-//     if(eventObject.target.id === 'match'){
-//         console.log("it's a match!")
-//     }
-//     // if they are a match, hide cards and update score
-//     // if cards are not a match, return to original state
-// }
-
-// // if all cards are cleared, return gameBoard to original state
 // function createBoard(){ 
+    
 //     for (let i = 0; i<4; i++) {
-//         image.setAttribute('src','images/front1.jpeg')
-//         imageBoard.push(image)
+//         images[i].setAttribute('src','images/display1.jpeg')
+//         imageBoard.push(images)
 //     }
 //     // strtBtn.removeEventListener('click',createBoard)
 //     return imageBoard
 // }
+
+// // display RANDOM image when cards are clicked
+// function displayImage(eventObject){
+//     // the image that I click
+//     // console.log(eventObject.target)
+//     // change the image 
+//       for (let i = 1; i<6; i++){
+//         // Can I generate a random image src and apply it as an attribute? 
+//         randomImage = 
+//         eventObject.target.setAttribute('src','images/match-1.jpeg')
+//       }
+      
+//     // console.log(eventObject.target.getAttribute('value'))
+//     if (firstCard === undefined){
+//         firstCard = eventObject.target.getAttribute('value')
+//     } else if (secondCard === undefined){
+//         secondCard = eventObject.target.getAttribute('value')
+//     }
+//     console.log('first card value' + firstCard)
+//     console.log('second card value' + secondCard)
+//     // conditional check if images are a match by their values
+//     if (firstCard === secondCard){
+        
+//     } else {
+        
+//     }
+// //    how do I get random images to show up when I click an image???
+
+// }
+// const createArrayofFlipped = () => {
+//     for (let i = 0; i < 6; i++){
+//     arrayofFlipped.push(flippedImages[i])
+//     console.log(arrayofFlipped)
+//     // shuffle function?
+// }
+// }
+
+
+
 
 
 
