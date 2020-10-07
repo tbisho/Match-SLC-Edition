@@ -1,4 +1,5 @@
-cardArray = ['match-1.jpeg','match-2.jpeg', 'match-3.jpeg', 'match-4.jpeg','match-5.jpeg','match-6.jpeg']
+console.log('sanitycheck')
+cardArray = ['match-1.jpeg','match-2.jpeg', 'match-3.jpeg', 'match-4.jpeg','match-5.jpeg','match-6.jpeg','match-1.jpeg','match-2.jpeg', 'match-3.jpeg', 'match-4.jpeg','match-5.jpeg','match-6.jpeg']
 
 // grid container
 const container = document.querySelector('.container')
@@ -6,10 +7,15 @@ const container = document.querySelector('.container')
 function getCards(){
     for (let i =0; i<cardArray.length; i++){
         var card = document.createElement('img')
-        card.setAttribute('src','display1.jpeg')
+        card.setAttribute('src','images/display1.jpeg')
         card.setAttribute('value', i)
+        // card.addEventListener('click', displayImage)
+        // append blank card to DOM
+        container.appendChild(card)
     }
 }
+getCards()
+
 
 
 // // start game button & DOM elements for event listeners
