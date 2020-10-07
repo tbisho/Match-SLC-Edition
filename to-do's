@@ -1,0 +1,14 @@
+1) When the user clicks start game
+- hide all elements except the cards
+- align the cards on the page
+
+2) When the user clicks two cards
+
+-show an image
+-if it's a match, fade to white
+-if it's not a match, turn back to 'back' of card
+
+3) When the user wins the game
+
+-all elements disappear accept the play again button
+
