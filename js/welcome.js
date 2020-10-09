@@ -1,5 +1,5 @@
 const container = document.querySelector('.container')
-const arrayOfValues = ['images/match-1.jpeg', 'images/match-2.jpeg','images/match-3.jpeg', 'images/match-4.jpeg','images/match-5.jpeg','images/match-6.jpeg']
+const arrayOfValues = ['images/utah-1.jpeg', 'images/utah-2.jpeg','images/utah-3.jpeg', 'images/utah-4.jpeg','images/utah-5.jpeg','images/utah-6.jpeg']
 const arrayOfPositions = [0,1,2,3,4,5,6,7,8,9,10,11]
 
 // Create Board
@@ -7,8 +7,12 @@ for (let i = 0; i<12; i++) {
     blueDivCardBack = document.createElement('div')
     blueDivCardBack.setAttribute('position', i)
     blueDivCardBack.setAttribute('class','card')
+    
+    blueDivCardBack.style.borderColor ='1px solid white'
+    blueDivCardBack.style.margin = "0 auto"
     container.appendChild(blueDivCardBack)
     blueDivCardBack.addEventListener('click', checkForMatch)
+    
 }
 
 for (let i = 0; i<arrayOfValues.length; i++){
@@ -23,6 +27,7 @@ for (let i = 0; i<arrayOfValues.length; i++){
     arrayOfPositions.splice(randomPositionTwo,1)
 }
 
+let score = 0;
 let firstCard;
 let secondCard;
 let flipCount = 0;
@@ -30,25 +35,22 @@ let matchCount = 0;
 
 function checkForMatch(event){
 flipCount++;
-this.style.color ='white'
 let imageValue = this.getAttribute('value')
 let backgroundString = "url('" + imageValue + "')"
-console.log(imageValue)
-this.style.background = backgroundString;
-// document.body.style.background = "url('[INSERT HTTPS IMAGE URL HERE]')";
+this.style.background = backgroundString
+this.style.backgroundSize = 'cover'
+this.style.border = 'dashed white'
 setTimeout(() =>{
 if (flipCount == 1){
     firstCard = {
     value:event.target.getAttribute('value'),
-    position:event.target.getAttribute('position')
-}
-console.log(firstCard)               
+    position:event.target.getAttribute('position'),
+}         
 } else if (flipCount == 2) {
     secondCard = {
     value:event.target.getAttribute('value'),
     position:event.target.getAttribute('position')
 } 
-console.log(secondCard)                 
 let cards = document.querySelectorAll('.card')
 if (firstCard.value === secondCard.value) { 
     matchCount++
@@ -57,17 +59,17 @@ if (firstCard.value === secondCard.value) {
     cards[secondCard.position].removeEventListener('click', checkForMatch)
 } 
 else {
-    cards[firstCard.position].style.color = 'transparent'
-    cards[secondCard.position].style.color = 'transparent'
-    cards[firstCard.position].style.background = 'blue'
-    cards[secondCard.position].style.background = 'blue'
+    // cards[firstCard.position].style.color = 'transparent'
+    // cards[secondCard.position].style.color = 'transparent'
+    cards[firstCard.position].style.background = "navajowhite"
+    cards[secondCard.position].style.background = "navajowhite"
 }
 flipCount= 0
 }
 if (matchCount === 6){
     alert('you win!')
 }
-},500)
-
+},450)
 
 }
+

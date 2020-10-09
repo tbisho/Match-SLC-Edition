@@ -6,32 +6,38 @@ body{
     color: brown;
 }
 .container {
+        margin: 0 auto;
+        width: 900px;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(3, 1fr);
         grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        height: auto;
-        width: auto;
+        grid-row-gap: 18px;
+        
+        /* height: auto;
+        width: auto; */
         text-align: center;
-        margin-left: 50px;
-        /* max-width: 487px; */
-
+        /* margin-left: 50px; */
         }
  
+div image {
+    background-size: cover;
+}
 .container div{
     text-align: center;
-    height: 150px;
-    width: 100px;
-    background-color: blue;
-    /* color: white; */
-    margin: 10px;
+    height: 250px;
+    width: 180px;
+    background:navajowhite;
+    border-style: dashed;
+    margin: 8px;
+    border-color: white;
+    border-radius: 12px;
 }
 
-img {
-    height: 250px;
+/* img {
+    height: 350px;
     width: 200px;
-}
+} */
 
 h1{
     font-size: 35px;
@@ -47,15 +53,12 @@ h1{
     height: auto;
     width: auto;
     background-color: whitesmoke;
+    margin-bottom: 18px;
 }
 
-.score h4{
-    margin: 10px;
-    text-align: left;
-    font-size: 20px;
-}
 
 .card{
     color: transparent;
+    
  
 }
