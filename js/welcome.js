@@ -31,6 +31,7 @@ let secondCard;
 let flipCount = 0;
 let matchCount = 0;
 let score = 0;
+let resetPeices =  document.querySelectorAll('.card')
 
 function checkForMatch(event){
 let scoreElement = document.querySelector('.score')
@@ -41,6 +42,7 @@ this.style.background = backgroundString
 this.style.backgroundSize = 'cover'
 this.style.border = 'dashed white'
 setTimeout(() =>{
+    
 if (flipCount == 1){
     firstCard = {
     value:event.target.getAttribute('value'),
@@ -61,8 +63,6 @@ if (firstCard.value === secondCard.value) {
     cards[secondCard.position].removeEventListener('click', checkForMatch)
 } 
 else {
-    // cards[firstCard.position].style.color = 'transparent'
-    // cards[secondCard.position].style.color = 'transparent'
     cards[firstCard.position].style.background = "navajowhite"
     cards[secondCard.position].style.background = "navajowhite"
 }

@@ -7,16 +7,13 @@ The motivation for creating this game was to complete a game start to finish wit
 ### User Stories & Wireframes
 To start building my memory game it was helpful to wireframe the basic functionality behind the game. Most of already know how to play, but building it is a different story! I used wireframe.cc to draw the game how I wanted to build it. It's also helpful to create user stories to imagine how the user will play the game. 
 
-The planning materials used to build this app
-
 ## User Stories
 * The user should be able to click on a card to reveal an image
 * Only allow the user to select two cards at a time
 * Indicate if those cards are a match by adding a point to the score board 
 * Indicate the cards are not a match by changing their image back to a blank card
 * The user should be able to win the game once all matches have been made
-
-## image files of wireframes
+* Image files of wireframes:
 
 ![wireframe 1](assets/wireframe-1.png)
 
@@ -31,9 +28,11 @@ The planning materials used to build this app
 
 ---
 ### Credits
+
 This game was a great introduction to game logic and using javaScript to manipulate the DOM. Some websites I used for help along the way:
-*[Medium](https://code.likeagirl.io/js-set-a-background-using-code-1cc26cf96ce4)
-*[Codepen](https://code.likeagirl.io/js-set-a-background-using-code-1cc26cf96ce4)
+
+[Medium](https://code.likeagirl.io/js-set-a-background-using-code-1cc26cf96ce4)
+[Codepen](https://code.likeagirl.io/js-set-a-background-using-code-1cc26cf96ce4)
 ---
 
 ### Future development
