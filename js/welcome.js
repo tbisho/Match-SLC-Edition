@@ -1,8 +1,9 @@
+// ----Game Data --------//
 const container = document.querySelector('.container')
 const arrayOfValues = ['images/utah-1.jpeg', 'images/utah-2.jpeg','images/utah-3.jpeg', 'images/utah-4.jpeg','images/utah-5.jpeg','images/utah-6.jpeg']
 const arrayOfPositions = [0,1,2,3,4,5,6,7,8,9,10,11]
 
-// Create Board
+// ----------Create game board---------------------------//
 for (let i = 0; i<12; i++) {
     blueDivCardBack = document.createElement('div')
     blueDivCardBack.setAttribute('position', i)
@@ -15,6 +16,7 @@ for (let i = 0; i<12; i++) {
     
 }
 
+//------------------Attach Data to game board------------------//
 for (let i = 0; i<arrayOfValues.length; i++){
     let randomPositionOne = Math.floor(Math.random()* arrayOfPositions.length)
     let cards = document.querySelectorAll('.card')
@@ -26,6 +28,10 @@ for (let i = 0; i<arrayOfValues.length; i++){
     cards[arrayOfPositions[randomPositionTwo]].innerText += "/" + arrayOfValues[i]
     arrayOfPositions.splice(randomPositionTwo,1)
 }
+
+
+// --------------- Game functionality ----------------------------//
+
 let firstCard;
 let secondCard;
 let flipCount = 0;
