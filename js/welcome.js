@@ -26,14 +26,14 @@ for (let i = 0; i<arrayOfValues.length; i++){
     cards[arrayOfPositions[randomPositionTwo]].innerText += "/" + arrayOfValues[i]
     arrayOfPositions.splice(randomPositionTwo,1)
 }
-
-let score = 0;
 let firstCard;
 let secondCard;
 let flipCount = 0;
 let matchCount = 0;
+let score = 0;
 
 function checkForMatch(event){
+let scoreElement = document.querySelector('.score')
 flipCount++;
 let imageValue = this.getAttribute('value')
 let backgroundString = "url('" + imageValue + "')"
@@ -53,8 +53,10 @@ if (flipCount == 1){
 } 
 let cards = document.querySelectorAll('.card')
 if (firstCard.value === secondCard.value) { 
+    score++
+    scoreElement.innerHTML = `Score: ${score}`
     matchCount++
-    alert('match!')
+    console.log('match')
     cards[firstCard.position].removeEventListener('click', checkForMatch)
     cards[secondCard.position].removeEventListener('click', checkForMatch)
 } 
